@@ -26,11 +26,11 @@ In this lesson we'll also use information from Wikipedia to find out related top
 
 We have copied the HTML from a page on Ada Lovelace from Wikipedia.  Because our browsers simply render out HTML if you open the file with chrome or another browser, you'll see the on your computer as if it were connected to the Internet.  
 
-To open the file the easy way, you can simply click on the following [wikipedia link](./lovelace.html).  If you scroll to the very bottom of the page, you will see a section called *Categories*.  Now, we want to write some code to retrieve the list of categories.
+To open the file the easy way, you can simply click on the following [wikipedia link](./lovelace.html).  If you scroll to the very bottom of the page, you will see a section called *Categories*.  Now, we want to write some code to retrieve the first category from the list.
 
 Once we do that, we can assume that not only will this code work on this particular webpage, but it will also work on every Wikipedia page.  
 
-Alright so how do we pull out the categories?
+Alright so how do we pull out that first category?
 
 Well remember that if we open up the console, and type in document then we will see a current representation of the Document Object Model.  However, that contains everything - the entire page.  We want to scope this down so that we just select the categories.  
 
@@ -56,7 +56,7 @@ You may be wondering where the # came from in `document.querySelector('#mw-norma
 
 ### Other CSS Selectors
 
-Now that we have covered that the css selector for selecting by an id attribute is the # sign, let's cover some of the others.  Below is some HTML content, and afterwards is a table of ways to select the paragraph element.  
+Now that we have covered that the css selector for selecting by an id attribute is the # sign, let's cover some of the others.  Below is some HTML content, and afterwards is a table displaying different ways to select the paragraph element.  
 
 ```html
 <div>
@@ -76,7 +76,9 @@ Now that we have covered that the css selector for selecting by an id attribute 
 | html tag      | ""	         |    document.querySelector.querySelector('p') |
 
 
-So you can see that we use prepend the # sign to the id attribute name, the . to the class attribute name and nothing when selecting by tag name.  We can also select elements using other methods.  Let's add in those other methods to our chart.
+So you can see that we prepend the # sign to the id attribute name to select an item by its id.  We prepend the . to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.  
+
+We can also select elements using other methods.  Let's add in those other methods to our chart.
 
 | Attribute     | CSS Selector  | querySelector Code |Alternative Method |
 | ------------- |:-------------:| -----:| -----:|
@@ -101,7 +103,7 @@ Type the following code into your console.
 
 `document.querySelector('#mw-normal-catlinks ul li')`
 
-Now that code selects precisely the correct element.  And we just learned something new.  We learned that by placing a space and then another element, Javascript will select only the matching element inside of previously matched element.  For example, here even though there were are other ul and li's on the page, we properly told Javascript to only select the ul inside of the li, and the li inside of the ul.  Doing so retrieved the following element.
+Now that code selects precisely the correct element.  And we just learned something new.  We learned that by placing a space and then another element, Javascript will select only the matching element inside of (ie. a descendant of) previously matched element.  For example, here even though there were are other ul and li's on the page, we properly told Javascript to only select the ul inside of the div with an id mw-normal-catlinks, and the li inside of the ul.  Doing so retrieved the following element.
 
 ```html
 <li>
