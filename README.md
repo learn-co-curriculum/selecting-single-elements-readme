@@ -74,8 +74,8 @@ Now that we have covered that the css selector for selecting by an id attribute 
 | Attribute     | CSS Selector  | querySelector Code |
 | ------------- |:-------------:| -----:|
 | id      	   | "#" 			  | document.querySelector('#content')|
-| class      	   | "."     		  |  document.querySelector.querySelector('.red') |
-| html tag      | ""	         |    document.querySelector.querySelector('p') |
+| class      	   | "."     		  |  document.querySelector('.red') |
+| html tag      | ""	         |    document.querySelector('p') |
 
 
 So you can see that we prepend the `#` sign to the id attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.  
@@ -85,8 +85,8 @@ We can also select elements using other methods.  Let's add in those other metho
 | Attribute     | CSS Selector  | querySelector Code |Alternative Method |
 | ------------- |:-------------:| -----:| -----:|
 | id      	   | "#" 			  | document.querySelector('#content')|document.getElementById('content')|
-| class      	   | "."     		  |  document.querySelector.querySelector('.red') |document.getElementByClassName('red')|
-| html tag      | ""	         |    document.querySelector.querySelector('p') | document.getElementByTagName('p')
+| class      	   | "."     		  |  document.querySelector('.red') |document.getElementByClassName('red')|
+| html tag      | ""	         |    document.querySelector('p') | document.getElementByTagName('p')
 
 > Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because Javascript already knows that we are selecting by the id attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
 
@@ -97,7 +97,7 @@ Moving back to our Ada Lovelace Wikipedia page, we have a problem.  We can use t
 ![li-selector](https://s3.amazonaws.com/learn-verified/li-selector-2.png)
 
 
-To just select the first category, we want get even more specific.  The way we do this is by saying that we want to retrieve the `ul` inside of the `div`, and the `li` inside of that `div`.
+To just select the first category, we want get even more specific.  The way we do this is by saying that we want to retrieve the `ul` inside of the `div`, and the `li` inside of that `ul`.
 
 Type the following code into your console.
 
@@ -186,3 +186,5 @@ In this section we learned how to use Javascript and our developer console to as
 5. Once you have properly targeted the element, you can then call other methods to identify attributes of that element.  Eg. document.querySelector('#mw-normal-catlinks ul li a').text
 
 After going through that process, we see we can then type in document.querySelector('#mw-normal-catlinks ul li a') to any Wikipedia page, and retrieve a related category.  
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-readme'>Selecting Single Elements Readme</a> on Learn.co and start learning to code for free.</p>
