@@ -17,7 +17,7 @@ Let me explain.  As you may know, search engines are built by looking at web pag
 
 In building Aardvark, the team had a problem: it wanted to connect not just question and answerers from the same subject but also related subjects.  For example, it needed to know that if a user had a question about cooking, but no one was available, that someone who knew about cuisine may have the answer.
 
-How did it do that?  It scraped the data from the Wikipedia page on cooking and looked to find what cooking was related to, and from there could connect some asking about cooking to someone who knew about cuisine.  Yes, not a perfect solution, but good enough to get the job done (and sell to Google for 50 million dollars).
+How did it do that?  It scraped the data from the Wikipedia page on cooking and looked to find what cooking was related to, and from there it could connect someone asking about cooking to someone who knew about cuisine.  Yes, not a perfect solution, but good enough to get the job done (and sell to Google for 50 million dollars).
 
 In this lesson we'll also use information from Wikipedia to find out related topics, a topic summary, and relevant pictures of the topic.  
 
@@ -186,3 +186,5 @@ In this section we learned how to use Javascript and our developer console to as
 5. Once you have properly targeted the element, you can then call other methods to identify attributes of that element.  Eg. document.querySelector('#mw-normal-catlinks ul li a').text
 
 After going through that process, we see we can then type in document.querySelector('#mw-normal-catlinks ul li a') to any Wikipedia page, and retrieve a related category.  
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-readme'>Selecting Single Elements Readme</a> on Learn.co and start learning to code for free.</p>
