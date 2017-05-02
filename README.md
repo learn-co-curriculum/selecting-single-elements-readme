@@ -74,8 +74,8 @@ Now that we have covered that the css selector for selecting by an id attribute 
 | Attribute     | CSS Selector  | querySelector Code |
 | ------------- |:-------------:| -----:|
 | id      	   | "#" 			  | document.querySelector('#content')|
-| class      	   | "."     		  |  document.querySelector.querySelector('.red') |
-| html tag      | ""	         |    document.querySelector.querySelector('p') |
+| class      	   | "."     		  |  document.querySelector('.red') |
+| html tag      | ""	         |    document.querySelector('p') |
 
 
 So you can see that we prepend the `#` sign to the id attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.  
