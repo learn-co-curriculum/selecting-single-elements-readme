@@ -85,8 +85,8 @@ We can also select elements using other methods.  Let's add in those other metho
 | Attribute     | CSS Selector  | querySelector Code |Alternative Method |
 | ------------- |:-------------:| -----:| -----:|
 | id      	   | "#" 			  | document.querySelector('#content')|document.getElementById('content')|
-| class      	   | "."     		  |  document.querySelector.querySelector('.red') |document.getElementByClassName('red')|
-| html tag      | ""	         |    document.querySelector.querySelector('p') | document.getElementByTagName('p')
+| class      	   | "."     		  |  document.querySelector('.red') |document.getElementByClassName('red')|
+| html tag      | ""	         |    document.querySelector('p') | document.getElementByTagName('p')
 
 > Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because Javascript already knows that we are selecting by the id attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
 
