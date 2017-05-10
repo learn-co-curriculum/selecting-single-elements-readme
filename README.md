@@ -97,7 +97,7 @@ Moving back to our Ada Lovelace Wikipedia page, we have a problem.  We can use t
 ![li-selector](https://s3.amazonaws.com/learn-verified/li-selector-2.png)
 
 
-To just select the first category, we want get even more specific.  The way we do this is by saying that we want to retrieve the `ul` inside of the `div`, and the `li` inside of that `div`.
+To just select the first category, we want get even more specific.  The way we do this is by saying that we want to retrieve the `ul` inside of the `div`, and the `li` inside of that `ul`.
 
 Type the following code into your console.
 
