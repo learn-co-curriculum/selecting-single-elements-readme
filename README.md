@@ -36,7 +36,7 @@ Well, remember that if we open up the console (right click on the page, click in
 
 So we'll use our `document.querySelector()` code just like we did in the last section.  But how do we know what to select?  
 
-## Exploring different selector methods
+# Exploring different selector methods
 
 ### Identify the correct piece of HTML in the console
 
