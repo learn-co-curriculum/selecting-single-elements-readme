@@ -39,6 +39,8 @@ So we'll use our `document.querySelector()` code just like we did in the last se
 ### Identify the correct piece of HTML in the console
 
 From the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. Then click on the `id` attribute, you should see the `id` is equal to `header`. Press command+c on Mac or Ctrl+c on Windows to copy the `id` attribute.  Ultimately, we'll use that `id` attribute with our query selector to select the correct element from our document.  
+
+![Selecting Element](https://curriculum-content.s3.amazonaws.com/web-development/selectElement.gif)
   
 ### Select the title with the querySelector method
 
@@ -88,9 +90,9 @@ We can also select elements using other methods.  Let's add in those other metho
 
 ### Selecting by ancestry - and solving a problem
 
-Moving back to our Ada Lovelace Wikipedia page, we have a problem.  We can use the `document.querySelector('#header')` to select the header. That's super useful, but if we are going to write a search engine made to find connections, we are going to need to learn how to grab the links on a page.
+Moving back to our Ada Lovelace Wikipedia page, we have a problem. You have seen how to use the `document.querySelector('#header')` to select the header. That's super useful, but if we are going to write a search engine made to find connections, we are going to need to learn how to grab the links on a page.
 
-Links (those blue underlined words you click on) are defined in HTML with an `a` tag. If we use our inspecting elements skills from above, and select the first link ("Charles Babbage") you'll see it has no `id` or `class` attribute. To select it we need to revert to the HTML tag style of selecting. As seen in the table above this looks like: `document.querySelector('p')`. That's close, but instead of grabbing a `p` tag, we want to grab an `a` tag. 
+Links (those blue underlined words you click on) are defined in HTML with an `a` tag. Go ahead and use your inspecting elements skills from above, and select the first link ("Charles Babbage") you'll see it has no `id` or `class` attribute. To select it we need to revert to the HTML tag style of selecting. As seen in the table above this looks like: `document.querySelector('p')`. That's close, but instead of grabbing a `p` tag, we want to grab an `a` tag. 
 
 To grab the first link in our web page we need to call `document.querySelector('a')`. That's it. Open up your Console again, make sure to change to the CodePen context by selecting the dropdown at the top that says `top` and selecting CodePen Preview. Then, type in `document.querySelector('a')`. You should see the first link be returned.
 
