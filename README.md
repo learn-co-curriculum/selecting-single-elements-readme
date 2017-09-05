@@ -1,13 +1,13 @@
 ## Selecting Content Readme
 
 ### Objectives
-Learn how to: 
+Learn how to:
 
-* Use the developer tools to identify a particular element 
+* Use the developer tools to identify a particular element
 * Use Javascript's selector methods to select particular pieces of the DOM
 * Learn about CSS selectors to select elements by id, class or HTML Tag.
 
-Ok, you may not feel like it yet, but you're a pretty good developer.  So it's time to have you start building a search engine.  
+Ok, so now that we know some JavaScript, I think it's time to we start building a search engine.  
 
 I'm serious.  
 
@@ -19,7 +19,7 @@ In building Aardvark, the team had a problem: it wanted to connect not just ques
 
 How did it do that?  It retrieved data from the web. Specifically Aardvark often used the topic's Wikipedia page to find what was related. Yes, not a perfect solution, but good enough to get the job done (and sell to Google for 50 million dollars).
 
-In this lesson, we'll also use information from a significantly simplified Wikipedia to find out the topic header and a related article.
+In this lesson, we'll use information from a simplified Wikipedia entry to find out the topic header and a related article.
 
 ### Get Started
 
@@ -41,7 +41,7 @@ So we'll use our `document.querySelector()` code just like we did in the last se
 From the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. Then click on the `id` attribute, you should see the `id` is equal to `header`. Press command+c on Mac or Ctrl+c on Windows to copy the `id` attribute.  Ultimately, we'll use that `id` attribute with our query selector to select the correct element from our document.  
 
 ![Selecting Element](https://curriculum-content.s3.amazonaws.com/web-development/selectElement.gif)
-  
+
 ### Select the title with the querySelector method
 
 Now that we have the identifier for the title, we can place that into our query selector method. First, we need to change our Console to caring only about the CodePen. To do this, you need to click on the Dropdown that says `Top` and change it to the CodePen Preview. Yours may say something slightly different, but it should start with "CodePen Preview". Here is a GIF explaining it a bit better:
@@ -92,14 +92,14 @@ We can also select elements using other methods.  Let's add in those other metho
 
 Moving back to our Ada Lovelace Wikipedia page, we have a problem. You have seen how to use the `document.querySelector('#header')` to select the header. That's super useful, but if we are going to write a search engine made to find connections, we are going to need to learn how to grab the links on a page.
 
-Links (those blue underlined words you click on) are defined in HTML with an `a` tag. Go ahead and use your inspecting elements skills from above, and select the first link ("Charles Babbage") you'll see it has no `id` or `class` attribute. To select it we need to revert to the HTML tag style of selecting. As seen in the table above this looks like: `document.querySelector('p')`. That's close, but instead of grabbing a `p` tag, we want to grab an `a` tag. 
+Links (those blue underlined words you click on) are defined in HTML with an `a` tag. Go ahead and use your inspecting elements skills from above, and select the first link ("Charles Babbage") you'll see it has no `id` or `class` attribute. To select it we need to use the HTML tag style of selecting. As seen in the table above this looks like: `document.querySelector('p')`. That's close, but instead of grabbing a `p` tag, we want to grab an `a` tag.
 
 To grab the first link in our web page we need to call `document.querySelector('a')`. That's it. Open up your Console again, make sure to change to the CodePen context by selecting the dropdown at the top that says `top` and selecting CodePen Preview. Then, type in `document.querySelector('a')`. You should see the first link be returned.
 
 
 ### Retreiving Attributes
 
-Now that we have selected the proper HTML element, we can ask Javascript about specific attributes of that element. When thinking about a link, the two most important attributes are what the URL it links to is and what the link text is.
+Now that we have selected the proper HTML element, we can ask Javascript about specific attributes of that element. When thinking about a link, the two most important attributes are the URL it links to is and the link text.
 
 To review, we selected the first link in our simplified wikipedia page by typing:
 
@@ -135,8 +135,8 @@ The website that a link goes to is called it's `href`. You can see it in the HTM
 
 How can we grab the `href` from our querySelector.
 
-> **The magic of guessing:** 
-> Programmers guess a lot more than you might think.  The reason why is because the consequences are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
+> **The magic of guessing:**
+> Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
 
 Ok, so if grabbing the `text` was just adding `.text` to the end of our querySelector. Let's try just adding `.href`.
 
@@ -162,6 +162,7 @@ In this section, we learned how to use Javascript and our developer console to a
 2. Depending on the type of attribute, you can then use `document.querySelector()` method, and in the parentheses pass through the proper CSS selector in combination with the attribute name to select that element.
 
 	> Or you can use a different Javascript method like `document.getElementByClassName()` to select the correct element.
+
 3. Once you have properly targeted the element, you can then call other methods to identify attributes of that element.  Eg.`document.querySelector('a').text`
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-readme'>Selecting Single Elements Readme</a> on Learn.co and start learning to code for free.</p>
