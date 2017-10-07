@@ -28,11 +28,11 @@ We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplifie
 <iframe height='530' scrolling='no' title='simplified-ada' src='//codepen.io/joemburgess/embed/NjEMOd/?height=530&theme-id=0&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/joemburgess/pen/NjEMOd/'>simplified-ada</a> by Joe Burgess (<a href='http://codepen.io/joemburgess'>@joemburgess</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-First thing's first, our website reader is going to need to read the title of our webpage. Thankfully, the title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
+First things first, our website reader is going to need to read the title of our webpage. Thankfully, the title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
 
 Let's confirm that the code wraps the big Ada Lovelace with `h1` tags.
 
-Well, remember that if we open up the console (right click on the page, click inspect), and type in `document` then we will see a current representation of the Document Object Model.  However, that contains everything - the entire page.  We want to scope this down so that we just select the "Ada Lovelace" title.
+Well, remember that if we open up the console (right click on the page, click inspect), select the "Console" Header and type in `document` then we will see a current representation of the Document Object Model.  However, that contains everything - the entire page.  We want to scope this down so that we just select the "Ada Lovelace" title.
 
 So we'll use our `document.querySelector()` code just like we did in the last section.  But how do we know what to select?  
 
@@ -83,8 +83,8 @@ We can also select elements using other methods.  Let's add in those other metho
 | Attribute     | CSS Selector  | querySelector Code |Alternative Method |
 | ------------- |:-------------:| -----:| -----:|
 | id     	   | `#` 			  | `document.querySelector('#content')`|`document.getElementById('content')`|
-| class      	   | `.`     		  |  `document.querySelector('.red')` |`document.getElementByClassName('red')`|
-| html tag      | 	         |    `document.querySelector('p')` | `document.getElementByTagName('p')`|
+| class      	   | `.`     		  |  `document.querySelector('.red')` |`document.getElementsByClassName('red')`|
+| html tag      | 	         |    `document.querySelector('p')` | `document.getElementsByTagName('p')`|
 
 > Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because Javascript already knows that we are selecting by the `id` attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
 
@@ -97,9 +97,9 @@ Links (those blue underlined words you click on) are defined in HTML with an `a`
 To grab the first link in our web page we need to call `document.querySelector('a')`. That's it. Open up your Console again, make sure to change to the CodePen context by selecting the dropdown at the top that says `top` and selecting CodePen Preview. Then, type in `document.querySelector('a')`. You should see the first link be returned.
 
 
-### Retreiving Attributes
+### Retrieving Attributes
 
-Now that we have selected the proper HTML element, we can ask Javascript about specific attributes of that element. When thinking about a link, the two most important attributes are the URL it links to is and the link text.
+Now that we have selected the proper HTML element, we can ask Javascript about specific attributes of that element. When thinking about a link, the two most important attributes are the URL it links to and the link text.
 
 To review, we selected the first link in our simplified wikipedia page by typing:
 
@@ -127,7 +127,7 @@ You'll get:
 
 Great, you now know what the text of the link is. This is quite valuable when starting to build a search engine! The next question to answer is _where_ does that link go to? If our users wanted more information on Charles Babbage, where should they go?
 
-The website that a link goes to is called it's `href`. You can see it in the HTML code itself:
+The website that a link goes to is called its `href`. You can see it in the HTML code itself:
 
 ```
 <a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a>
@@ -161,7 +161,7 @@ In this section, we learned how to use Javascript and our developer console to a
 1. From the browser, click inspect element on the HTML element you are interested in to find an identifying attribute to select the HTML.
 2. Depending on the type of attribute, you can then use `document.querySelector()` method, and in the parentheses pass through the proper CSS selector in combination with the attribute name to select that element.
 
-	> Or you can use a different Javascript method like `document.getElementByClassName()` to select the correct element.
+	> Or you can use a different Javascript method like `document.getElementsByClassName()` to select the correct element.
 
 3. Once you have properly targeted the element, you can then call other methods to identify attributes of that element.  Eg.`document.querySelector('a').text`
 
