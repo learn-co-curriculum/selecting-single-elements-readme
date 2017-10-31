@@ -1,5 +1,5 @@
 ## Selecting Content Readme
-
+ping
 ### Objectives
 Learn how to:
 
