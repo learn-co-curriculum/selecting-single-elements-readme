@@ -9,7 +9,7 @@ Learn how to:
 
 ### Introduction
 
-For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model api](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model). The [Document Object Model](https://www.w3schools.com/js/js_htmldom.asp) (DOM), is a way of thinking about a document as a "root" and all other elements being branches or "children" of that root. By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser. 
+For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [Document Object Model API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model). The [Document Object Model](https://www.w3schools.com/js/js_htmldom.asp) (DOM), is a way of thinking about a document as a "root" and all other elements being branches or "children" of that root. By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser. 
 
 ### Get Started
 
@@ -27,14 +27,14 @@ You can view the HTML content in the browser by [clicking here](https://en.wikip
 
 Now that we have the identifier for the title, we can place that into our query selector method. 
 
-Now, from the Console tab in Chrome Developer Tools, type in `document.querySelector('h1')`, and it should have selected the appropriate element. You should see something like this.
+Now, from the Console tab in Chrome Developer Tools, type in `document.querySelector('h1')`, and it should have selected the appropriate element. You should see something like this:
 
 ```js
 document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag in quotes.
+So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass in the name of the tag in quotes.
  
 ### Other CSS Selectors
 
