@@ -78,7 +78,7 @@ Links are defined in HTML with an `a` tag. Let's use what we know so far to try 
 
 ### Retrieving Attributes
 
-Now that we have selected the proper HTML element, let's see what we have on our hands.
+Now that we have selected the proper HTML element, let's save it to a variable and examine it "under a microscope."
 
 ```js
 let londonAnchor = document.querySelector('.birthplace').querySelector('a')
