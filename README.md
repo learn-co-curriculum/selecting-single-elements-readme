@@ -72,9 +72,9 @@ Let's turn back to our `lovelace.html` file.
 
 ### Selecting by ancestry - and solving a problem
 
-Moving back to our Ada Lovelace Wikipedia page, let's see if we can select some more content: links.
+Let's some more content: links.
 
-Links are defined in HTML with an `a` tag. Go ahead and use your inspecting elements skills from above, and select the link in the gray box that says "Charles Babbage".  You'll see it has no `id` or `class` attribute. To select it we need to use the HTML tag style of selecting the infobox, and then selecting the first link inside of the element with a class of `birthplace`: `document.querySelector('.infobox').querySelector('a')`.
+Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select the first link within it.
 
 ### Retrieving Attributes
 
