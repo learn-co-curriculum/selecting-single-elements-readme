@@ -32,7 +32,7 @@ document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag.
+So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag. The `document.querySelector` method  will return the _first match_. One can easily imagine multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
 
 ### Other CSS Selectors
 
