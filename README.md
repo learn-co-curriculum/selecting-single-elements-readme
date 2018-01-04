@@ -93,7 +93,7 @@ Let's turn back to our `lovelace.html` file.
 
 Let's some more content: links.
 
-Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is we will "chain" our calls to document.querySelector Try this:
+Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is we will "chain" our calls to document.querySelector. Try this:
 
 `document.querySelector(".infobox").querySelector("span.deathplace").querySelector("a")`
 
