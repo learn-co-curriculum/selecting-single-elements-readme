@@ -23,7 +23,7 @@ From the browser, right click (or two fingers click) on the Ada Lovelace title, 
 
 ### Select the title with the querySelector method
 
-Now that we have the identifier for the title, we can place that into our query selector method.
+Now that we have the `id`entifier for the title, we can place that into our query selector method.
 
 Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
 
