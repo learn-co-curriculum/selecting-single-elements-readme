@@ -17,8 +17,6 @@ Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki
 
 First things first, let's try to read the title of the webpage. The title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
 
-Let's confirm the HTML in the Wikipedia page wraps the big Ada Lovelace with `h1` tags.
-
 ### Identify the correct piece of HTML in the console
 
 From the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. Then click on the `id` attribute, you should see the `id` is equal to `header`. Press command+c on Mac or Ctrl+c on Windows to copy the `id` attribute.  Ultimately, we'll use that `id` attribute with our query selector to select the correct element from our document.
