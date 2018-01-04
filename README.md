@@ -19,7 +19,26 @@ First things first, let's try to read the title of the webpage. The title is usu
 
 ### Identify the correct piece of HTML in the console
 
-From the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. You should see the `id` "attribute" is equal to `firstHeading`. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name.  Let's use that `id` attribute value with our query selector to select the correct element from our document. In doing so we'll perceive the necessity of understanding HTML well: JavaScript can only be used to affect the HTML that has can be "grabbed."
+To set up clarity of the next instructions, let's define some vocabulary.  At
+the moment your browser is presenting its _content pane_. Naturally enough this
+is where the content is displayed. In this next operation we're going to open
+up the "Developer Tools." These tools exist in their own pane, the _developer
+tools pane_ or _inspector_. The _developer pane_ has multiple _headings_. That
+should be enough vocabulary.
+
+1. From the browser, right click (or two fingers click) on the Ada Lovelace title in the _content pane_
+2. Click on inspect from the dropdown menu.
+3. Your _developer tools pane_ may come up on the right or the bottom
+4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
+5. Click on the "Ada Lovelace" title in the _content pane_.
+6. The result of this click should be shown in the _developer tools pane_. The
+   "Elements" header should be active and the HTML entity for the title should
+   be select ("highlighted blue").
+7. See the `id` "attribute" is equal to `firstHeading`
+8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name.
+
+Let's use that `id` attribute value with `document.querySelector` to select the
+correct element from our document.
 
 ### Select the title with the querySelector method
 
