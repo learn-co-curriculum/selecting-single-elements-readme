@@ -68,6 +68,8 @@ We can also select elements using other methods.  Let's add in those other metho
 
 > Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because Javascript already knows that we are selecting by the `id` attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
 
+Let's turn back to our `lovelace.html` file.
+
 ### Selecting by ancestry - and solving a problem
 
 Moving back to our Ada Lovelace Wikipedia page, let's see if we can select some more content: links.
