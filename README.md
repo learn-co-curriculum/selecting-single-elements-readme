@@ -36,7 +36,7 @@ So `h1` is called the tag name of the element.  And to select something by the t
 
 ### Other CSS Selectors
 
-Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  Below is some HTML content, and afterward is a table displaying different ways to select the paragraph element.
+Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  For the moment, we'll step away from the `lovelace.html` document and look at a simple HTML snippet. Beneath the snippet, find a table displaying different ways to select the paragraph element.
 
 ```html
 <div>
