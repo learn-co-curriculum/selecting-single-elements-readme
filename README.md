@@ -74,18 +74,27 @@ Let's turn back to our `lovelace.html` file.
 
 Let's some more content: links.
 
-Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select the first link within it.
+Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. Try this:
+
+`document.querySelector(".infobox").querySelector("span.deathplace").querySelector("a")`
+
+This code statement should make sense in English if you read it backward:
+
+"Find the link that's within the span element with the class "deathplace" that's within some element with the class "infobox".
+
+It's our opinion that having the mental flexibility to read backward and forward in different made-up languages might be the reason so many programmers are prone to puns, wordplay, and Lewis Carroll books.
 
 ### Retrieving Attributes
 
 Now that we have selected the proper HTML element, let's save it to a variable and examine it "under a microscope."
 
 ```js
-let londonAnchor = document.querySelector('.birthplace').querySelector('a')
-londonAnchor.constructor
+let maryleboneAnchor = document.querySelector(".infobox").querySelector("span.deathplace").querySelector("a")
+maryleboneAnchor.constructor
 // ƒ HTMLAnchorElement() { [native code] }
 ```
-By calling the selected element's constructor method, we can see that we `lovelaceAnchor` is an instance of an HTMLAnchorElement.  Many of methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `londonAnchor.href` returns `"/wiki/London"`, `londonAnchor.text` returns `"London"`.
+
+By calling the selected element's constructor method, we can see that we `maryleboneAnchor` is an instance of an HTMLAnchorElement.  Many of methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
 
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
