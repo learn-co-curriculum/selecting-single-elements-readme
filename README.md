@@ -13,7 +13,7 @@ For this lesson we want to look a little deeper at how to retrieve information a
 
 ### Get Started
 
-Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki/Ada_Lovelace). We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser.
+Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki/Ada_Lovelace). We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser. You can browse the "local" system by using &#x2318; + o on a Mac or Control + o or &x2318; on other systems and open the `lovelace.html` file. We'll be working with this file over the next several instructions.
 
 First things first, let's try to read the title of the webpage. The title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
 
