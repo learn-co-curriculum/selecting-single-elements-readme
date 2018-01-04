@@ -13,17 +13,49 @@ For this lesson we want to look a little deeper at how to retrieve information a
 
 ### Get Started
 
-Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki/Ada_Lovelace). We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser. You can browse the "local" system by using &#x2318; + o on a Mac or Control + o or &x2318; on other systems and open the `lovelace.html` file. We'll be working with this file over the next several instructions.
+Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki/Ada_Lovelace). We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser. You can browse the "local" system by using &#x2318; + o on a Mac or Control + o on other systems and open the `lovelace.html` file. We'll be working with this file over the next several instructions.
 
 First things first, let's try to read the title of the webpage. The title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
 
 ### Identify the correct piece of HTML in the console
 
-From the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. You should see the `id` "attribute" is equal to `firstHeading`. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name.  Let's use that `id` attribute value with our query selector to select the correct element from our document. In doing so we'll perceive the necessity of understanding HTML well: JavaScript can only be used to affect the HTML that has can be "grabbed."
+To set up clarity of the next instructions, let's define some vocabulary.  At
+the moment your browser is presenting its _content pane_. Naturally enough this
+is where the content is displayed. In this next operation we're going to open
+up the "Developer Tools." These tools exist in their own pane, the _developer
+tools pane_ or _inspector_. The _developer pane_ has multiple _headings_. That
+should be enough vocabulary.
+
+1. From the browser, right click (or two fingers click) on the Ada Lovelace title in the _content pane_
+2. Click on inspect from the dropdown menu.
+3. Your _developer tools pane_ may come up on the right or the bottom
+4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
+5. Click on the "Ada Lovelace" title in the _content pane_.
+6. The result of this click should be shown in the _developer tools pane_. The
+   "Elements" header should be active and the HTML entity for the title should
+   be select ("highlighted blue")
+7. See the `id` "attribute" is equal to `firstHeading`
+8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name. This is a very common pattern for developers to use since `id`s can be quite nasty to type out.
+
+Let's use that `id` attribute value with `document.querySelector` to select the
+correct element from our document. Select the "Console" header within the
+_developer tools pane_ and fill in `document.querySelector()`'s parentheses
+with ", #, _paste_, " so that the full line looks like:
+
+```javascript
+document.querySelector("#firstHeading")
+```
+
+You should see returned:
+
+```text
+<h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
+```
+
+Congratulations, you've used the `id` to find an element on a page! Let's
+try a more general application by simply looking up based on the tag.
 
 ### Select the title with the querySelector method
-
-Now that we have the `id`entifier for the title, we can place that into our query selector method.
 
 Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
 
