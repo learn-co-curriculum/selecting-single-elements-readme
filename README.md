@@ -9,7 +9,7 @@ Learn how to:
 
 ### Introduction
 
-For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model api](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser. 
+For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model api](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser.
 
 ### Get Started
 
@@ -21,11 +21,11 @@ Let's confirm the HTML in the Wikipedia page wraps the big Ada Lovelace with `h1
 
 ### Identify the correct piece of HTML in the console
 
-You can view the HTML content in the browser, either by [clicking here](https://en.wikipedia.org/wiki/Ada_Lovelace) or by opening the `lovelace.html` page included in this reading.  Then, from the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. Then click on the `id` attribute, you should see the `id` is equal to `header`. Press command+c on Mac or Ctrl+c on Windows to copy the `id` attribute.  Ultimately, we'll use that `id` attribute with our query selector to select the correct element from our document.  
+You can view the HTML content in the browser, either by [clicking here](https://en.wikipedia.org/wiki/Ada_Lovelace) or by opening the `lovelace.html` page included in this reading.  Then, from the browser, right click (or two fingers click) on the Ada Lovelace title, and then click on inspect from the dropdown menu. Your Inspector may come up on the right or the bottom. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the Element Selector. Once you click that, select the "Ada Lovelace" title of the Wikipedia page. Then click on the `id` attribute, you should see the `id` is equal to `header`. Press command+c on Mac or Ctrl+c on Windows to copy the `id` attribute.  Ultimately, we'll use that `id` attribute with our query selector to select the correct element from our document.
 
 ### Select the title with the querySelector method
 
-Now that we have the identifier for the title, we can place that into our query selector method. 
+Now that we have the identifier for the title, we can place that into our query selector method.
 
 Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
 
@@ -35,10 +35,10 @@ document.querySelector('h1')
 ```
 
 So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag.
- 
+
 ### Other CSS Selectors
 
-Now that we have covered that the CSS selector for selecting by tag is to simply pass through the name of the tag.  Let's see some other ways to select elements.  Below is some HTML content, and afterward is a table displaying different ways to select the paragraph element.  
+Now that we have covered that the CSS selector for selecting by tag is to simply pass through the name of the tag.  Let's see some other ways to select elements.  Below is some HTML content, and afterward is a table displaying different ways to select the paragraph element.
 
 ```html
 <div>
@@ -58,7 +58,7 @@ Now that we have covered that the CSS selector for selecting by tag is to simply
 | html tag      | 	         |    `document.querySelector('p')` |
 
 
-So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.  
+So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.
 
 We can also select elements using other methods.  Let's add in those other methods to our chart.
 
@@ -78,7 +78,7 @@ Links are defined in HTML with an `a` tag. Go ahead and use your inspecting elem
 
 ### Retrieving Attributes
 
-Now that we have selected the proper HTML element, let's see what we have on our hands. 
+Now that we have selected the proper HTML element, let's see what we have on our hands.
 
 ```js
 let londonAnchor = document.querySelector('.birthplace').querySelector('a')
@@ -90,7 +90,7 @@ By calling the selected element's constructor method, we can see that we `lovela
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
 
-The methods we explored thusfar like like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element.  
+The methods we explored thusfar like like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element.
 
 ### Summary
 
