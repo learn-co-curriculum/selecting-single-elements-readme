@@ -33,16 +33,29 @@ should be enough vocabulary.
 5. Click on the "Ada Lovelace" title in the _content pane_.
 6. The result of this click should be shown in the _developer tools pane_. The
    "Elements" header should be active and the HTML entity for the title should
-   be select ("highlighted blue").
+   be select ("highlighted blue")
 7. See the `id` "attribute" is equal to `firstHeading`
-8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name.
+8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name. This is a very common pattern for developers to use since `id`s can be quite nasty to type out.
 
 Let's use that `id` attribute value with `document.querySelector` to select the
-correct element from our document.
+correct element from our document. Select the "Console" header within the
+_developer tools pane_ and fill in `document.querySelector()`'s parentheses
+with ", #, _paste_, " so that the full line looks like:
+
+```javascript
+document.querySelector("#firstHeading")
+```
+
+You should see returned:
+
+```text
+<h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
+```
+
+Congratulations, you've used the `id` to find an element on a page! Let's
+try a more general application by simply looking up based on the tag.
 
 ### Select the title with the querySelector method
-
-Now that we have the `id`entifier for the title, we can place that into our query selector method.
 
 Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
 
