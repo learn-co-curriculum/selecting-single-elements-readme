@@ -101,6 +101,8 @@ By calling the selected element's constructor method, we can see that we `maryle
 
 The methods we explored thus far like like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
 
+If `maryleboneAnchor` isn't providing anything interesting, use the "chained" querySelector method to find something more interesting. Don't forget the magic of guessing either, if there's a `next....` something there's probably also a `previous....` something. If a method doesn't return a String, what _does_ it return? This process of exploration and guess-and-check, optimized for speed, is how programmers avoid having to know books worth of knowledge: they don't memorize all the facts, they ask the _computer_ to teach them micro-lessons.
+
 ### Summary
 
 In this section, we learned how to use Javascript and our developer console to ask questions about our HTML. Here is our process:
