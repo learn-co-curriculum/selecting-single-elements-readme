@@ -10,7 +10,7 @@ Learn how to:
 
 ### Introduction
 
-For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model api](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser.
+For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser.
 
 ### Get Started
 
