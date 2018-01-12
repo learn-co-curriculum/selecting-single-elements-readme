@@ -14,9 +14,17 @@ For this lesson we want to look a little deeper at how to retrieve information a
 
 ### Get Started
 
-Let's work with the "Ada Lovelace" Wikipedia entry. We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser. You can browse the "local" system by using &#x2318; + o on a Mac or Control + o on other systems and open the `lovelace.html` file. We'll be working with this file over the next several instructions.
+Let's work with the "Ada Lovelace" Wikipedia entry. We have copied the HTML
+from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the
+`lovelace.html` page included in this reading in your web browser. You can
+browse the "local" system by using &#x2318; + o on a Mac or Control + o on
+other systems and open the `lovelace.html` file. We'll be working with this
+file over the next several instructions.
 
-First things first, let's try to read the title of the webpage. The title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
+First things first, let's try to read the title of the webpage. The title is
+usually just the first header in the web page. In HTML, headers are called `h1`
+tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page,
+it looks like the title is "Ada Lovelace".
 
 ### Identify the correct piece of HTML in the console
 
