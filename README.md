@@ -15,11 +15,19 @@ For this lesson we want to look a little deeper at how to retrieve information a
 ### Get Started
 
 Let's work with the "Ada Lovelace" Wikipedia entry. We have copied the HTML
-from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the
-`lovelace.html` page included in this reading in your web browser. You can
-browse the "local" system by using &#x2318; + o on a Mac or Control + o on
-other systems and open the `lovelace.html` file. We'll be working with this
-file over the next several instructions.
+from Wikipedia and simplified it a bit. Let's download this file to your local
+system.
+
+1. Download the zipfile of this challenge [here][zip].
+2. Unzip the file on your local system. Most operating systems will download
+   and extract the zipfile to either your "Downloads" or "Desktop" directories.
+3. Using a file browser (like OSX's "Finder" or the Windows "File Explorer")
+   find the file `lovelace.html`. Double-click it and it should open
+   `lovelace.html` in Chrome.
+4. **Alternatively:** Open up Chrome, use &#x2318; + o on a Mac or Control + o
+   on other systems to browse the local file system. Navigagte to
+   `lovelace.html` file and open it. We'll be working with this file over the next
+   several instructions.
 
 First things first, let's try to read the title of the webpage. The title is
 usually just the first header in the web page. In HTML, headers are called `h1`
@@ -157,3 +165,5 @@ In this section, we learned how to use JavaScript and our developer console to a
 [MDN Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-readme'>Selecting Single Elements Readme</a> on Learn.co and start learning to code for free.</p>
+
+[zip]: https://github.com/learn-co-curriculum/selecting-single-elements-readme/archive/master.zip
