@@ -18,16 +18,16 @@ Let's work with the "Ada Lovelace" Wikipedia entry. We have copied the HTML
 from Wikipedia and simplified it a bit. Let's download this file to your local
 system.
 
-1. Download the zipfile of this challenge [here][zip].
+1. Download the zipfile of this challenge [here][zip]
 2. Unzip the file on your local system. Most operating systems will download
-   and extract the zipfile to either your "Downloads" or "Desktop" directories.
+   and extract the zipfile to either your "Downloads" or "Desktop" directories
 3. Using a file browser (like OSX's "Finder" or the Windows "File Explorer")
    find the file `lovelace.html`. Double-click it and it should open
-   `lovelace.html` in Chrome.
+   `lovelace.html` in Chrome
 4. **Alternatively:** Open up Chrome, use &#x2318; + o on a Mac or Control + o
    on other systems to browse the local file system. Navigagte to
    `lovelace.html` file and open it. We'll be working with this file over the next
-   several instructions.
+   several instructions
 
 First things first, let's try to read the title of the webpage. The title is
 usually just the first header in the web page. In HTML, headers are called `h1`
