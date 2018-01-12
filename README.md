@@ -1,11 +1,12 @@
 ## Selecting Content Readme
 
 ### Objectives
+
 Learn how to:
 
 * Use the developer tools to identify a particular element
-* Use Javascript's selector methods to select particular pieces of the DOM
-* Learn about CSS selectors to select elements by id, class or HTML Tag.
+* Use JavaScript's selector methods to select particular pieces of the DOM
+* Learn about CSS selectors and use them to select elements by id, class or HTML Tag.
 
 ### Introduction
 
@@ -104,9 +105,9 @@ Let's turn back to our `lovelace.html` file.
 
 ### Selecting by ancestry - and solving a problem
 
-Let's some more content: links.
+Let's look at some more content: links.
 
-Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is we will "chain" our calls to document.querySelector. Try this:
+Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is, we will "chain" our calls to `document.querySelector`. Try this:
 
 `document.querySelector(".infobox").querySelector("span.deathplace").querySelector("a")`
 
@@ -126,12 +127,12 @@ maryleboneAnchor.constructor
 // ƒ HTMLAnchorElement() { [native code] }
 ```
 
-By calling the selected element's constructor method, we can see that we `maryleboneAnchor` is an instance of an HTMLAnchorElement.  Many of methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
+By calling the selected element's constructor method, we can see that we `maryleboneAnchor` is an instance of an HTMLAnchorElement.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
 
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
 
-The methods we explored thus far like like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
+The methods we explored thus far like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
 
 If `maryleboneAnchor` isn't providing anything interesting, use the "chained" querySelector method to find something more interesting. Don't forget the magic of guessing either, if there's a `next....` something there's probably also a `previous....` something. If a method doesn't return a String, what _does_ it return? This process of exploration and guess-and-check, optimized for speed, is how programmers avoid having to know books worth of knowledge: they don't memorize all the facts, they ask the _computer_ to teach them micro-lessons.
 
