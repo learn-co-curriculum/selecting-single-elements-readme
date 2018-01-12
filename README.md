@@ -1,41 +1,62 @@
 ## Selecting Content Readme
 
 ### Objectives
+
 Learn how to:
 
 * Use the developer tools to identify a particular element
-* Use Javascript's selector methods to select particular pieces of the DOM
-* Learn about CSS selectors to select elements by id, class or HTML Tag.
+* Use JavaScript's selector methods to select particular pieces of the DOM
+* Learn about CSS selectors and use them to select elements by id, class or HTML Tag.
 
 ### Introduction
 
-For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model api](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser.
+For this lesson we want to look a little deeper at how to retrieve information about a webpage by using JavaScript's [document object model API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model).  By working with JavaScript's DOM API, we will be able to select and manipulate any content on the browser.
 
 ### Get Started
 
-Let's work with the [Ada Lovelace Wikipedia entry](https://en.wikipedia.org/wiki/Ada_Lovelace). We have copied the HTML from a page on Ada Lovelace from Wikipedia and simplified it a bit.  Open the `lovelace.html` page included in this reading in your web browser. You can browse the "local" system by using &#x2318; + o on a Mac or Control + o on other systems and open the `lovelace.html` file. We'll be working with this file over the next several instructions.
+Let's work with the "Ada Lovelace" Wikipedia entry. We have copied the HTML
+from Wikipedia and simplified it a bit. Let's download this file to your local
+system.
 
-First things first, let's try to read the title of the webpage. The title is usually just the first header in the web page. In HTML, headers are called `h1` tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page, it looks like the title is "Ada Lovelace".
+1. Download the zipfile of this challenge [here][zip]
+2. Unzip the file on your local system. Most operating systems will download
+   and extract the zipfile to either your "Downloads" or "Desktop" directories
+3. Using a file browser (like OSX's "Finder" or the Windows "File Explorer")
+   find the file `lovelace.html`. Double-click it and it should open
+   `lovelace.html` in Chrome
+4. **Alternatively:** Open up Chrome, use &#x2318; + o on a Mac or Control + o
+   on other systems to browse the local file system. Navigagte to
+   `lovelace.html` file and open it. We'll be working with this file over the next
+   several instructions
 
-### Identify the correct piece of HTML in the console
+First things first, let's try to read the title of the webpage. The title is
+usually just the first header in the web page. In HTML, headers are called `h1`
+tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page,
+it looks like the title is "Ada Lovelace".
+
+### Identify The Correct Piece Of HTML In The Console
 
 To set up clarity of the next instructions, let's define some vocabulary.  At
-the moment your browser is presenting its _content pane_. Naturally enough this
-is where the content is displayed. In this next operation we're going to open
-up the "Developer Tools." These tools exist in their own pane, the _developer
-tools pane_ or _inspector_. The _developer pane_ has multiple _headings_. That
-should be enough vocabulary.
+the moment your browser is presenting information about Ada Lovelace in its
+_content pane_. Naturally enough this is where the content is displayed. In
+this next operation we're going to open up the "Developer Tools." These tools
+exist in their own pane, the _developer tools pane_ or _inspector_. The
+_developer pane_ has multiple _headings_. That should be enough vocabulary.
 
-1. From the browser, right click (or two fingers click) on the Ada Lovelace title in the _content pane_
-2. Click on inspect from the dropdown menu.
+1. From the browser, right click (or two fingers click) on the "Ada Lovelace"
+   title in the _content pane_
+2. Click on **Inspect** from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
 4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
 5. Click on the "Ada Lovelace" title in the _content pane_.
 6. The result of this click should be shown in the _developer tools pane_. The
    "Elements" header should be active and the HTML entity for the title should
-   be select ("highlighted blue")
+   be selected ("highlighted")
 7. See the `id` "attribute" is equal to `firstHeading`
-8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name. This is a very common pattern for developers to use since `id`s can be quite nasty to type out.
+8. Double-click on the `id` attribute's value and Chrome will text-select it
+   for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on
+   Windows to copy this `id` attribute name. This is a very common pattern for
+   developers to use since `id`s can be quite nasty to type out.
 
 Let's use that `id` attribute value with `document.querySelector` to select the
 correct element from our document. Select the "Console" header within the
@@ -55,20 +76,20 @@ You should see returned:
 Congratulations, you've used the `id` to find an element on a page! Let's
 try a more general application by simply looking up based on the tag.
 
-### Select the title with the querySelector method
+### Select The Title With The QuerySelector Method
 
-Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
+Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the _first_ appropriate element.
 
 ```js
 document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag. The `document.querySelector` method  will return the _first match_. One can easily imagine multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
+The "tag name" of this element is `h1`. To select something by the tag name we simply "pass" through the "tag name" to `document.querySelecgtor`. Be sure to recognize that the `document.querySelector` method  will return the _first match_. One can easily imagine HTML pages with multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
 
 ### Other CSS Selectors
 
-Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  For the moment, we'll step away from the `lovelace.html` document and look at a simple HTML snippet. Beneath the snippet, find a table displaying different ways to select the paragraph element.
+Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  For the moment, we'll step away from the `lovelace.html` document and look at a simple HTML snippet as a thought experiment. Beneath the snippet, find a table displaying different ways to select the paragraph element.
 
 ```html
 <div>
@@ -88,7 +109,7 @@ Using JavaScript we can "target" elements using the same syntax we "target" elem
 | html tag      | 	         |    `document.querySelector('p')` |
 
 
-So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.
+So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its `id.` We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.
 
 We can also select elements using other methods.  Let's add in those other methods to our chart.
 
@@ -102,11 +123,11 @@ We can also select elements using other methods.  Let's add in those other metho
 
 Let's turn back to our `lovelace.html` file.
 
-### Selecting by ancestry - and solving a problem
+### Selecting By Ancestry - And Solving a Problem
 
-Let's some more content: links.
+Let's look at some more content: links.
 
-Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is we will "chain" our calls to document.querySelector. Try this:
+Links are defined in HTML with an `a` tag. Let's use what we know so far to try to access the link for the word "Marylebone" inside the "info box" or "gray inset" at the right. Inspect this element.  You'll see it has no `id` or `class` attribute.  To select it we can select the infobox and _then_ select a unique span with a class name and _then_ the first link within that span. That is, we will "chain" our calls to `document.querySelector`. Try this:
 
 `document.querySelector(".infobox").querySelector("span.deathplace").querySelector("a")`
 
@@ -126,12 +147,12 @@ maryleboneAnchor.constructor
 // ƒ HTMLAnchorElement() { [native code] }
 ```
 
-By calling the selected element's constructor method, we can see that we `maryleboneAnchor` is an instance of an HTMLAnchorElement.  Many of methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
+By calling the selected element's `constructor` property, we can see that we `maryleboneAnchor` is an "instance" of an `HTMLAnchorElement`.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
 
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
 
-The methods we explored thus far like like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
+The methods we explored thus far like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
 
 If `maryleboneAnchor` isn't providing anything interesting, use the "chained" querySelector method to find something more interesting. Don't forget the magic of guessing either, if there's a `next....` something there's probably also a `previous....` something. If a method doesn't return a String, what _does_ it return? This process of exploration and guess-and-check, optimized for speed, is how programmers avoid having to know books worth of knowledge: they don't memorize all the facts, they ask the _computer_ to teach them micro-lessons.
 
@@ -148,3 +169,5 @@ In this section, we learned how to use JavaScript and our developer console to a
 [MDN Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/selecting-single-elements-readme'>Selecting Single Elements Readme</a> on Learn.co and start learning to code for free.</p>
+
+[zip]: https://github.com/learn-co-curriculum/selecting-single-elements-readme/archive/master.zip
