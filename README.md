@@ -37,11 +37,11 @@ it looks like the title is "Ada Lovelace".
 ### Identify the correct piece of HTML in the console
 
 To set up clarity of the next instructions, let's define some vocabulary.  At
-the moment your browser is presenting its _content pane_. Naturally enough this
-is where the content is displayed. In this next operation we're going to open
-up the "Developer Tools." These tools exist in their own pane, the _developer
-tools pane_ or _inspector_. The _developer pane_ has multiple _headings_. That
-should be enough vocabulary.
+the moment your browser is presenting information about Ada Lovelace in its
+_content pane_. Naturally enough this is where the content is displayed. In
+this next operation we're going to open up the "Developer Tools." These tools
+exist in their own pane, the _developer tools pane_ or _inspector_. The
+_developer pane_ has multiple _headings_. That should be enough vocabulary.
 
 1. From the browser, right click (or two fingers click) on the Ada Lovelace title in the _content pane_
 2. Click on inspect from the dropdown menu.
