@@ -34,7 +34,7 @@ usually just the first header in the web page. In HTML, headers are called `h1`
 tags and look like this: `<h1>This Is My Title</h1>`. In our Ada Lovelace page,
 it looks like the title is "Ada Lovelace".
 
-### Identify the correct piece of HTML in the console
+### Identify The Correct Piece Of HTML In The Console
 
 To set up clarity of the next instructions, let's define some vocabulary.  At
 the moment your browser is presenting information about Ada Lovelace in its
@@ -76,7 +76,7 @@ You should see returned:
 Congratulations, you've used the `id` to find an element on a page! Let's
 try a more general application by simply looking up based on the tag.
 
-### Select the title with the querySelector method
+### Select The Title With The QuerySelector Method
 
 Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
 
@@ -123,7 +123,7 @@ We can also select elements using other methods.  Let's add in those other metho
 
 Let's turn back to our `lovelace.html` file.
 
-### Selecting by ancestry - and solving a problem
+### Selecting By Ancestry - And Solving a Problem
 
 Let's look at some more content: links.
 
