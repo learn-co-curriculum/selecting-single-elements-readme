@@ -43,7 +43,8 @@ this next operation we're going to open up the "Developer Tools." These tools
 exist in their own pane, the _developer tools pane_ or _inspector_. The
 _developer pane_ has multiple _headings_. That should be enough vocabulary.
 
-1. From the browser, right click (or two fingers click) on the Ada Lovelace title in the _content pane_
+1. From the browser, right click (or two fingers click) on the Ada Lovelace
+   title in the _content pane_
 2. Click on inspect from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
 4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
@@ -52,7 +53,10 @@ _developer pane_ has multiple _headings_. That should be enough vocabulary.
    "Elements" header should be active and the HTML entity for the title should
    be select ("highlighted blue")
 7. See the `id` "attribute" is equal to `firstHeading`
-8. Double-click on the `id` attribute's value and Chrome will text-select it for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on Windows to copy this `id` attribute name. This is a very common pattern for developers to use since `id`s can be quite nasty to type out.
+8. Double-click on the `id` attribute's value and Chrome will text-select it
+   for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on
+   Windows to copy this `id` attribute name. This is a very common pattern for
+   developers to use since `id`s can be quite nasty to type out.
 
 Let's use that `id` attribute value with `document.querySelector` to select the
 correct element from our document. Select the "Console" header within the
