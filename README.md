@@ -43,15 +43,15 @@ this next operation we're going to open up the "Developer Tools." These tools
 exist in their own pane, the _developer tools pane_ or _inspector_. The
 _developer pane_ has multiple _headings_. That should be enough vocabulary.
 
-1. From the browser, right click (or two fingers click) on the Ada Lovelace
+1. From the browser, right click (or two fingers click) on the "Ada Lovelace"
    title in the _content pane_
-2. Click on inspect from the dropdown menu.
+2. Click on **Inspect** from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
 4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
 5. Click on the "Ada Lovelace" title in the _content pane_.
 6. The result of this click should be shown in the _developer tools pane_. The
    "Elements" header should be active and the HTML entity for the title should
-   be select ("highlighted blue")
+   be selected ("highlighted")
 7. See the `id` "attribute" is equal to `firstHeading`
 8. Double-click on the `id` attribute's value and Chrome will text-select it
    for you for ease of copy-and-paste. Press &#x2318;+c on Mac or Ctrl+c on
@@ -78,18 +78,18 @@ try a more general application by simply looking up based on the tag.
 
 ### Select The Title With The QuerySelector Method
 
-Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the appropriate element.
+Now, from the Console, type in `document.querySelector('h1')`, and you'll see that this selects the _first_ appropriate element.
 
 ```js
 document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-So `h1` is called the tag name of the element.  And to select something by the tag name we simply pass through the name of the tag. The `document.querySelector` method  will return the _first match_. One can easily imagine multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
+The "tag name" of this element is `h1`. To select something by the tag name we simply "pass" through the "tag name" to `document.querySelecgtor`. Be sure to recognize that the `document.querySelector` method  will return the _first match_. One can easily imagine HTML pages with multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
 
 ### Other CSS Selectors
 
-Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  For the moment, we'll step away from the `lovelace.html` document and look at a simple HTML snippet. Beneath the snippet, find a table displaying different ways to select the paragraph element.
+Using JavaScript we can "target" elements using the same syntax we "target" element in CSS. You've just used the first occurrence of an HTML tag match to "select" an HTML element.  Let's see some other ways to "select" elements.  For the moment, we'll step away from the `lovelace.html` document and look at a simple HTML snippet as a thought experiment. Beneath the snippet, find a table displaying different ways to select the paragraph element.
 
 ```html
 <div>
@@ -109,7 +109,7 @@ Using JavaScript we can "target" elements using the same syntax we "target" elem
 | html tag      | 	         |    `document.querySelector('p')` |
 
 
-So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its id.  We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.
+So you can see that we prepend the `#` sign to the `id` attribute name to select an item by its `id.` We prepend the `.` to the class attribute name to select an item by its class name.  And we prepend nothing when selecting by tag name.
 
 We can also select elements using other methods.  Let's add in those other methods to our chart.
 
@@ -147,7 +147,7 @@ maryleboneAnchor.constructor
 // ƒ HTMLAnchorElement() { [native code] }
 ```
 
-By calling the selected element's constructor method, we can see that we `maryleboneAnchor` is an instance of an HTMLAnchorElement.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
+By calling the selected element's `constructor` property, we can see that we `maryleboneAnchor` is an "instance" of an `HTMLAnchorElement`.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
 
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
