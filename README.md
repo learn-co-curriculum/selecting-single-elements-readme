@@ -46,7 +46,7 @@ _developer pane_ has multiple _headings_. That should be enough vocabulary.
 1. From the browser, right click (or two fingers click) in the "content pane"
 2. Click on **Inspect** from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
-4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
+4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." After you click that...
 5. Click on the "Ada Lovelace" title in the _content pane_.
 6. The result of this click should be shown in the _developer tools pane_. The
    "Elements" header should be active and the HTML entity for the title should
