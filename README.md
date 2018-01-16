@@ -61,6 +61,12 @@ Let's use that `id` attribute value with `document.querySelector` to select the
 correct element from our document. Select the "Console" header within the
 _developer tools pane_ and fill in `document.querySelector()`'s parentheses
 with ", #, _paste_, " so that the full line looks like:
+**Aside**: You'll notice that this `h1` tag has an `id` attribute the same
+content as the `class` attribute. This is relatively uncommon. An `id` is
+usually obviously unique like `mostImportantHeader` while class might be a list
+of class names like `header pretty-purple women-tech-pioneer`. We'll focus more
+on this later, but don't make the mistake of thinking these two attributes are
+required to be the same.
 
 ```javascript
 document.querySelector("#firstHeading")
