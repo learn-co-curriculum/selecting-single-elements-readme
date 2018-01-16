@@ -43,11 +43,10 @@ this next operation we're going to open up the "Developer Tools." These tools
 exist in their own pane, the _developer tools pane_ or _inspector_. The
 _developer pane_ has multiple _headings_. That should be enough vocabulary.
 
-1. From the browser, right click (or two fingers click) on the "Ada Lovelace"
-   title in the _content pane_
+1. From the browser, right click (or two fingers click) in the "content pane"
 2. Click on **Inspect** from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
-4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
+4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." After you click that...
 5. Click on the "Ada Lovelace" title in the _content pane_.
 6. The result of this click should be shown in the _developer tools pane_. The
    "Elements" header should be active and the HTML entity for the title should
@@ -58,10 +57,17 @@ _developer pane_ has multiple _headings_. That should be enough vocabulary.
    Windows to copy this `id` attribute name. This is a very common pattern for
    developers to use since `id`s can be quite nasty to type out.
 
-Let's use that `id` attribute value with `document.querySelector` to select the
-correct element from our document. Select the "Console" header within the
-_developer tools pane_ and fill in `document.querySelector()`'s parentheses
-with ", #, _paste_, " so that the full line looks like:
+**Aside**: You'll notice that this `h1` tag has an `id` attribute the same
+content as the `class` attribute. This is relatively uncommon. An `id` is
+usually obviously unique like `mostImportantHeader` while class might be a list
+of class names like `header pretty-purple women-tech-pioneer`. We'll focus more
+on this later, but don't make the mistake of thinking these two attributes are
+required to be the same.
+
+Let's use that captured `id` attribute value with `document.querySelector` to
+select the correct element from our document. Select the "Console" header
+within the _developer tools pane_ and fill in `document.querySelector()`'s
+parentheses with ", #, _paste_, " so that the full line looks like:
 
 ```javascript
 document.querySelector("#firstHeading")
@@ -73,8 +79,9 @@ You should see returned:
 <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-Congratulations, you've used the `id` to find an element on a page! Let's
-try a more general application by simply looking up based on the tag.
+Congratulations, you've used the `id` to find an element on a page with
+JavaScript! Let's try a more general application by simply looking up based on
+the tag.
 
 ### Select The Title With The QuerySelector Method
 
@@ -85,7 +92,7 @@ document.querySelector('h1')
 // <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-The "tag name" of this element is `h1`. To select something by the tag name we simply "pass" through the "tag name" to `document.querySelecgtor`. Be sure to recognize that the `document.querySelector` method  will return the _first match_. One can easily imagine HTML pages with multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
+The "tag name" of this element is `h1`. To select something by the tag name we simply "pass" through the "tag name" to `document.querySelector`. Be sure to recognize that the `document.querySelector` method  will return the _first match_. One can easily imagine HTML pages with multiple `<p>` tags, however. We will cover multiple match scenario in a later lesson, but if you'd like to grow your self-education muscles, search the Web for the **MDN** documentation on **`document.querySelectorAll`**.
 
 ### Other CSS Selectors
 
@@ -119,7 +126,7 @@ We can also select elements using other methods.  Let's add in those other metho
 | class      	   | `.`     		  |  `document.querySelector('.red')` |`document.getElementsByClassName('red')`|
 | html tag      | 	         |    `document.querySelector('p')` | `document.getElementsByTagName('p')`|
 
-> Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because Javascript already knows that we are selecting by the `id` attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
+> Notice that when we use a method like `getElementById` we do not need to start with a # sign.  This is because JavaScript already knows that we are selecting by the `id` attribute by virtue of using a method that only accepts an id.  Query selectors take different types of attributes, so there we do need to specify the type of attribute we are selecting by.
 
 Let's turn back to our `lovelace.html` file.
 
@@ -152,9 +159,9 @@ By calling the selected element's `constructor` property, we can see that we `ma
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
 
-The methods we explored thus far like `href` and `text` make a lot of sense when we have an instance of an HTMLAnchorElement.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
+The methods we explored thus far like `href` and `text` make a lot of sense when we have an instance of an `HTMLAnchorElement`.  There are other methods you can reliably call on any instance of an element (or any HTML DOM node, to be technical) that you select.  We already saw a couple of them when exploring the DOM in previous lessons.  These methods can allow us to find information about other related nodes, like `children`, or `nextSibling`.  Some tell us attributes of element, like `attributes` to see attributes of the element, `classList` to see a list of classes associated with the element, and `style` which returns the associated CSS styles of a selected element. Explore these on the `maryleboneAnchor` element.
 
-If `maryleboneAnchor` isn't providing anything interesting, use the "chained" querySelector method to find something more interesting. Don't forget the magic of guessing either, if there's a `next....` something there's probably also a `previous....` something. If a method doesn't return a String, what _does_ it return? This process of exploration and guess-and-check, optimized for speed, is how programmers avoid having to know books worth of knowledge: they don't memorize all the facts, they ask the _computer_ to teach them micro-lessons.
+If `maryleboneAnchor` isn't providing anything interesting, use the "chained" `querySelector` method to find something more interesting. Don't forget the magic of guessing either, if there's a `next....` something there's probably also a `previous....` something. If a method doesn't return a String, what _does_ it return? This process of exploration and guess-and-check, optimized for speed, is how programmers avoid having to know books worth of knowledge: they don't memorize all the facts, they ask the _computer_ to teach them micro-lessons.
 
 ### Summary
 
