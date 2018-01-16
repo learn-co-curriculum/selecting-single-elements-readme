@@ -43,8 +43,7 @@ this next operation we're going to open up the "Developer Tools." These tools
 exist in their own pane, the _developer tools pane_ or _inspector_. The
 _developer pane_ has multiple _headings_. That should be enough vocabulary.
 
-1. From the browser, right click (or two fingers click) on the "Ada Lovelace"
-   title in the _content pane_
+1. From the browser, right click (or two fingers click) in the "content pane"
 2. Click on **Inspect** from the dropdown menu.
 3. Your _developer tools pane_ may come up on the right or the bottom
 4. Select the icon two icons to the left of the "Elements" Header. It should look like this: ![element inspector icon](http://web-dev-readme-photos.s3.amazonaws.com/js/elementinspector-icon.png). This is the "Element Selector." Once you click that...
