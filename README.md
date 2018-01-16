@@ -79,8 +79,9 @@ You should see returned:
 <h1 id="firstHeading" class="firstHeading" lang="en">Ada Lovelace</h1>
 ```
 
-Congratulations, you've used the `id` to find an element on a page! Let's
-try a more general application by simply looking up based on the tag.
+Congratulations, you've used the `id` to find an element on a page with
+JavaScript! Let's try a more general application by simply looking up based on
+the tag.
 
 ### Select The Title With The QuerySelector Method
 
