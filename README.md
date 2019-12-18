@@ -145,7 +145,7 @@ maryleboneAnchor.constructor
 // ƒ HTMLAnchorElement() { [native code] }
 ```
 
-By calling the selected element's `constructor` property, we can see that we `maryleboneAnchor` is an "instance" of an `HTMLAnchorElement`.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
+By calling the selected element's `constructor` property, we can see that `maryleboneAnchor` is an "instance" of an `HTMLAnchorElement`.  Many methods on this instance correspond to the potential attributes of an HTML anchor.  For example, `maryleboneAnchor.href` returns `"/wiki/Marylebone"`, `maryleboneAnchor.text` returns `"Marylebone"`.
 
 > **The magic of guessing:**
 > Programmers guess a lot more than you might think.  The reason why is because the consequences guessing incorrectly are really low, and you can often quickly find out if you are right or wrong.  So if you're unsure if some code will work, just guess and try it.  The consequence of guessing incorrectly is that you learn something new about the language.
