@@ -48,8 +48,7 @@ _developer pane_ has multiple _headings_. That should be enough vocabulary.
    Windows to copy this `id` attribute name. This is a very common pattern for
    developers to use since `id`s can be quite nasty to type out.
 
-**Aside**: You'll notice that this `h1` tag has an `id` attribute the same
-content as the `class` attribute. This is relatively uncommon. An `id` is
+**Aside**: You'll notice that this `h1` tag has an `id` attribute that matches the `class` attribute. This is relatively uncommon. An `id` is
 usually obviously unique like `mostImportantHeader` while class might be a list
 of class names like `header pretty-purple women-tech-pioneer`. We'll focus more
 on this later, but don't make the mistake of thinking these two attributes are
